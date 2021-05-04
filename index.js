@@ -21,6 +21,8 @@ app.post('/sendMessage/:phone', (req, res)=>{
     return res.send('Success');
 })
 
-app.listen(8000, ()=>{
-    console.log("app running on port 8000");
+
+const port = process.env.port || 8098
+app.listen(port, ()=>{
+    console.log(`app running on port ${port}`);
 })
